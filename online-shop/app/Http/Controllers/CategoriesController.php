@@ -23,7 +23,7 @@ class CategoriesController extends Controller
     function store(Request $request)
     {
         $request->validate(Category::$rules);
-
+        // store as a public file 
         $imageUrl = $request->file('image')->store('categories', ['disk' => 'public']);
         $category = new Category;
 
