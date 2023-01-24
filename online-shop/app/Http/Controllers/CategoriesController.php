@@ -34,7 +34,7 @@ class CategoriesController extends Controller
         return redirect()->route('categories.index');
     }
 
-    function edit($id)
+   function edit($id)
     {
         // if there is no such ID return 404 (not found)
         $category = Category::findOrFail($id);

@@ -23,6 +23,7 @@ Route::get('/add-product', [HomeController::class, 'add_product']);
 Route::get('/shop', [HomeController::class, 'shop']);
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::post('/contact',[ContactController::class,'sendMessage']);
+
 /*
 Route::get('/dashboard', function () {
     return view('dashboard');
