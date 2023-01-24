@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
     <h2>Edit Category</h2>
-    <form method="POST" action="{{ url('admin/categories/'.$category->id) }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ url('admin/categories/'.$category->id) }}">
         @csrf
         @method('PUT')
         <label>Name</label>
@@ -9,7 +9,7 @@
         @error('name')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
-        <input name="image" type="file" />
+        <input class="form-control" name="image" value="{{ old('image', $category->image) }}" />
         @error('image')
             <div class="alert alert-danger">{{ $message }}</div>
         @enderror
