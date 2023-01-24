@@ -23,7 +23,7 @@ Route::get('/add-product', [HomeController::class, 'add_product']);
 Route::get('/shop', [HomeController::class, 'shop']);
 Route::get('/contact',[ContactController::class,'index'])->name('contact');
 Route::post('/contact',[ContactController::class,'sendMessage']);
-
+/*
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -33,10 +33,10 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-
+/*
 require __DIR__ . '/auth.php';
 
 Route::middleware(['auth', 'can:is_admin'])->prefix('/admin')->group(function () {
     Route::resource('products', ProductsController::class);
     Route::resource('categories', CategoriesController::class);
-});
+});*/
