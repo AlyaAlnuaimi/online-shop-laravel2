@@ -17,6 +17,7 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    // send this data only to DB 
     protected $fillable = [
         'name',
         'email',
