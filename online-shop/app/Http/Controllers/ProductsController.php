@@ -24,6 +24,7 @@ class ProductsController extends Controller
 
     public function index()
     {
+        
         return view('admin.products.index')->with('products', Product::paginate(10));
     }
 
@@ -113,5 +114,9 @@ class ProductsController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function checkout(){
+        return view('checkout');
     }
 }
