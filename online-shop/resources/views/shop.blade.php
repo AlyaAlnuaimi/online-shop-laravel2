@@ -183,6 +183,7 @@
                             </div>
                         @endforeach
                         <div class="col-12">
+                            
                             {!! $products->appends(request()->except('page'))->links() !!}
                         </div>
                     </div>
@@ -194,7 +195,7 @@
     </form>
 @endsection
 
-
+<!-- add the product to cart -->
 @section('scripts')
     <script>
         function addProductToSession(id) {
